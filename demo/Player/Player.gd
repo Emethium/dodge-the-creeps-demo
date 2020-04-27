@@ -6,7 +6,7 @@ export var speed = 400  # How fast the player will move (pixels/sec).
 var screen_size  # Size of the game window.
 
 func _ready():
-	hide()
+	# hide()
 	screen_size = get_viewport_rect().size
 
 func start(pos):
@@ -49,3 +49,19 @@ func _on_Player_body_entered(body):
 	emit_signal("hit")
 	$CollisionShape2D.set_deferred("disabled", true)
 
+
+
+func _on_Player_hit():
+	pass # Replace with function body.
+
+
+func _on_MobTimer_timeout():
+	pass # Replace with function body.
+
+
+func _on_ScoreTimer_timeout():
+	pass # Replace with function body.
+
+
+func _on_StartTimer_timeout():
+	pass # Replace with function body.

@@ -1,11 +1,11 @@
 extends RigidBody2D
 
-export var : float min_speed = 150
-export var : float max_speed = 200
+export var  min_speed : float = 150
+export var max_speed : float = 200
 var mob_types = ["walk", "swim", "fly"]
 
 func _ready():
 	$AnimatedSprite.animation = mob_types[randi() % mob_types.size()]
 	
-func _on_Visibility_screen_exited():
+func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
