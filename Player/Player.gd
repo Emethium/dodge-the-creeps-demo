@@ -6,7 +6,7 @@ export var speed = 400  # How fast the player will move (pixels/sec).
 var screen_size  # Size of the game window.
 
 func _ready():
-	# hide()
+	hide()
 	screen_size = get_viewport_rect().size
 
 func start(pos):
@@ -44,6 +44,7 @@ func _process(delta):
 
 
 
+# warning-ignore:unused_argument
 func _on_Player_body_entered(body):
 	hide()  # Player disappears after being hit.
 	emit_signal("hit")
